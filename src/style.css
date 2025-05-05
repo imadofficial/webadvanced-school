@@ -1,0 +1,255 @@
+/* Global Styles */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark; /* Informs the browser about color schemes */
+  color: rgba(255, 255, 255, 0.87); /* Default text color for dark mode */
+  background-color: #242424; /* Default background color for dark mode */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box; /* Apply box-sizing globally */
+}
+
+/* Box Sizing for All Elements */
+*,
+*::before,
+*::after {
+  box-sizing: inherit; /* Ensures consistent box-sizing */
+}
+
+#Title{
+  padding-top: 20px;
+}
+
+/* Style for the flight box */
+.flight {
+  border: 2px solid #000;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  width: 65vw;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.flighttime {
+  flex-shrink: 0;
+  padding-right: 15px;
+  font-size: 1.2em;
+}
+
+.flight-details {
+  flex-grow: 1;
+}
+
+.flight h2, .flight p {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.flight h2 {
+  margin-bottom: 5px;
+}
+
+.navbar {
+  background-color: #333;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.navbar-item {
+  margin: 0 15px;
+}
+
+.navbar-item a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.navbar-item a:hover {
+  color: #00bcd4; /* Hover color */
+}
+
+/* Add space to content below navbar */
+body {
+  margin-top: 80px; /* Adjusted for navbar height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0; /* Reset margin for the body */
+}
+
+/* Adjustments for light and dark themes */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff; /* Light mode background */
+  }
+
+  /* Flight Box in Light Mode */
+  .flight {
+    border: 2px solid #000; /* Dark border */
+    background-color: #ffffff; /* Light background */
+  }
+
+  /* Link hover effect in light mode */
+  a:hover {
+    color: #747bff;
+  }
+
+  /* Button style for light mode */
+  button {
+    background-color: #f9f9f9; /* Light background */
+    color: #213547; /* Dark text */
+  }
+
+  /* Navbar styling for light mode */
+  .navbar {
+    background-color: #ffffff; /* White navbar */
+  }
+  .navbar-item a {
+    color: #213547; /* Dark text for links */
+  }
+  .navbar-item a:hover {
+    color: #747bff; /* Hover color */
+  }
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: rgba(255, 255, 255, 0.87); /* Light text for dark mode */
+    background-color: #121212; /* Dark background */
+  }
+
+  /* Flight Box in Dark Mode */
+  .flight {
+    border: 2px solid #444; /* Lighter dark border */
+    background-color: #333; /* Dark background */
+  }
+
+  /* Link hover effect in dark mode */
+  a:hover {
+    color: #f9b94b; /* Yellow hover color */
+  }
+
+  /* Button style for dark mode */
+  button {
+    background-color: #444; /* Dark background */
+    color: #e4e4e4; /* Light text */
+  }
+
+  /* Navbar styling for dark mode */
+  .navbar {
+    background-color: #333; /* Dark navbar */
+  }
+  .navbar-item a {
+    color: #e4e4e4; /* Light text for links */
+  }
+  .navbar-item a:hover {
+    color: #f9b94b; /* Hover color */
+  }
+}
+
+/* Responsive Design: For screens 768px and smaller */
+@media (max-width: 768px) {
+  .navbar-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-item {
+    margin: 10px 0;
+  }
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.vanilla:hover {
+  filter: drop-shadow(0 0 2em #f7df1eaa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
