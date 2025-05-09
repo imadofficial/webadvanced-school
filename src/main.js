@@ -37,7 +37,8 @@ const home = async (container) => {
 
     container.innerHTML = `
     <nav class="navbar">
-        <div class="flight">
+    <center>
+        <div id="switchSelect" class="flight">
           <h2>Vertrekkingen</h2>
           <label class="switch">
             <input type="checkbox">
@@ -45,12 +46,13 @@ const home = async (container) => {
           </label>
           <h2>Aankomsten</h2>
         </div>
+        </center>
     </nav>
 
     <div>
       <h2 id="Title">Vertrekkingen vanuit Brussels Airport</h2>
       <div class="flights-list">
-        ${flightsHTML}  <!-- Render the dynamically created HTML here -->
+        ${flightsHTML}
       </div>
     </div>
   `;

@@ -21,10 +21,9 @@
 }
 
 #Title{
-  padding-top: 20px;
+  padding-top: 75px;
 }
 
-/* Style for the flight box */
 .flight {
   border: 2px solid #000;
   padding: 10px;
@@ -42,6 +41,7 @@
 
 .flighttime {
   flex-shrink: 0;
+  padding-left: 10px;
   padding-right: 15px;
   font-size: 1.2em;
 }
