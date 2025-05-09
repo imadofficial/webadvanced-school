@@ -3,74 +3,99 @@ import Router from './router.js';
 import './style.css';
 import './switch.css';
 
+function formatFullDate(dateInput, locale = 'en-US') {
+  const date = new Date(dateInput); // Convert the input to a Date object
+  const day = date.getDate();
+
+  const month = date.toLocaleString(locale, { month: 'long' });
+  const year = date.getFullYear();
+
+  return `${day} ${month} ${year}`;
+}
+
 const home = async (container) => {
-  let flightsHTML = '';
-  try {
-      const data = await fetch('./Departures.json');
-      const stations = await data.json();
+  let type = 0; // 0 = Departures, 1 = Arrivals
 
-      const flights = stations._embedded.flights;
-      
-      for (let index = 0; index < flights.length; index++) {
-          const flight = flights[index];
-          const date = new Date(flight.scheduled_time);
+  const renderFlights = async () => {
+      let flightsHTML = '';
+      try {
+          const file = type === 0 ? './Departures.json' : './Arrivals.json';
+          const response = await fetch(file);
+          const stations = await response.json();
+          const flights = stations._embedded.flights;
 
-          const hours = date.getHours().toString().padStart(2, '0');
-          const minutes = date.getMinutes().toString().padStart(2, '0');
-          const timeStr = `${hours}:${minutes}`;
 
-          flightsHTML += `
-          <div class="flight">
-              <div class="flighttime" onclick="window.location.hash='/detail?id=${flight["id"]}'">
-                  <h5>${timeStr}</h5>
+          const getTodayUTC = () => new Date().toISOString().slice(0, 10);
+
+          let OldDate = getTodayUTC();
+          
+          for (let flight of flights) {
+              const date = new Date(flight.scheduled_time);
+              const hours = date.getHours().toString().padStart(2, '0');
+              const minutes = date.getMinutes().toString().padStart(2, '0');
+              const timeStr = `${hours}:${minutes}`;
+
+
+              let FlightDate = date.toISOString().split('T')[0];
+
+              if(FlightDate != OldDate){
+                flightsHTML += `
+                <div class="HStackLeft">
+                  <h3>${formatFullDate(FlightDate, "en-US")}</h3>
+                <hr>
+              </div>`
+              }
+
+              OldDate = FlightDate
+
+              flightsHTML += `
+              <div class="flight" onclick="window.location.hash='/detail?id=${flight.id}'">
+                  <div class="flighttime">
+                      <h5>${timeStr}</h5>
+                  </div>
+                  <div class="flight-details">
+                      <h2>${flight.location.name}</h2>
+                      <p>${flight.companions[0].id}</p>
+                  </div>
               </div>
-              
-              <div class="flight-details">
-                  <h2>${flight["location"]["name"]}</h2>
-                  <p>${flight["companions"][0]["id"]}</p>
-              </div>
-          </div>
-          `;  
+              `;
+          }
+      } catch (err) {
+          console.error(err);
+          flightsHTML = '<p>Error loading flights</p>';
       }
-  } catch(err) {
-      console.log(err);
-      flightsHTML = '<p>Error loading flights</p>';
-  }
 
-  container.innerHTML = `
-  <nav class="navbar">
-  <center>
-      <div id="switchSelect" class="flight">
+      container.innerHTML = `
+      <nav class="navbar">
+        <div id="switchSelect" class="flight">
           <h2>Vertrekkingen</h2>
           <label class="switch">
-              <input type="checkbox" id="flightToggle">
-              <span class="slider round"></span>
+            <input type="checkbox" id="flightToggle" ${type === 1 ? 'checked' : ''}>
+            <span class="slider round"></span>
           </label>
           <h2>Aankomsten</h2>
-      </div>
-  </center>
-  </nav>
+        </div>
+        <input type="text" id="fname" name="fname">
+      </nav>
 
-  <div>
-      <h2 id="Title">Vertrekkingen vanuit Brussels Airport</h2>
-      <div class="flights-list">
-          ${flightsHTML}
+      <div>
+          <h2 id="Title">${type === 1 ? 'Aankomsten op Brussels Airport' : 'Vertrekkingen vanuit Brussels Airport'}</h2>
+          <div class="flights-list">
+              ${flightsHTML}
+          </div>
       </div>
-  </div>
-  `;
-  
-  // Add toggle functionality
-  const toggle = document.getElementById('flightToggle');
-  if (toggle) {
-      toggle.addEventListener('change', (e) => {
-          const title = document.getElementById('Title');
-          if (title) {
-              title.textContent = e.target.checked 
-                  ? 'Aankomsten op Brussels Airport' 
-                  : 'Vertrekkingen vanuit Brussels Airport';
-          }
-      });
-  }
+      `;
+
+      const toggle = document.getElementById('flightToggle');
+      if (toggle) {
+          toggle.addEventListener('change', async (e) => {
+              type = e.target.checked ? 1 : 0;
+              await renderFlights(); // re-render with new type
+          });
+      }
+  };
+
+  await renderFlights();
 };
 
 const notFound = (container) => {

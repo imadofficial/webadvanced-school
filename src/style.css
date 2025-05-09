@@ -3,21 +3,20 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color-scheme: light dark; /* Informs the browser about color schemes */
-  color: rgba(255, 255, 255, 0.87); /* Default text color for dark mode */
-  background-color: #242424; /* Default background color for dark mode */
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box; /* Apply box-sizing globally */
+  box-sizing: border-box;
 }
 
-/* Box Sizing for All Elements */
 *,
 *::before,
 *::after {
-  box-sizing: inherit; /* Ensures consistent box-sizing */
+  box-sizing: inherit; 
 }
 
 #Title{
@@ -37,6 +36,25 @@
   justify-content: space-between;
   align-items: center;
   transition: background-color 0.3s, border-color 0.3s;
+}
+
+.HStackLeft {
+  align-items: flex-start;
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.HStackLeft h3 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.HStackLeft hr {
+  margin: 0;
+  margin-top: 0;
 }
 
 .flighttime {
@@ -61,6 +79,9 @@
 }
 
 .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #333;
   padding: 1rem;
   position: fixed;
@@ -68,6 +89,16 @@
   left: 0;
   width: 100%;
   z-index: 1000;
+  gap: 2rem
+}
+
+input {
+  width: 150px;
+  height: 45px;
+
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
 }
 
 .navbar-list {
@@ -90,93 +121,81 @@
 }
 
 .navbar-item a:hover {
-  color: #00bcd4; /* Hover color */
+  color: #00bcd4;
 }
 
-/* Add space to content below navbar */
 body {
-  margin-top: 80px; /* Adjusted for navbar height */
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-width: 320px;
   min-height: 100vh;
-  margin: 0; /* Reset margin for the body */
+  margin: 0;
 }
 
-/* Adjustments for light and dark themes */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff; /* Light mode background */
+    background-color: #ffffff;
   }
 
-  /* Flight Box in Light Mode */
   .flight {
-    border: 2px solid #000; /* Dark border */
-    background-color: #ffffff; /* Light background */
+    border: 2px solid #000; 
+    background-color: #ffffff;
   }
 
-  /* Link hover effect in light mode */
   a:hover {
     color: #747bff;
   }
 
-  /* Button style for light mode */
   button {
-    background-color: #f9f9f9; /* Light background */
-    color: #213547; /* Dark text */
+    background-color: #f9f9f9;
+    color: #213547;
   }
 
-  /* Navbar styling for light mode */
   .navbar {
-    background-color: #ffffff; /* White navbar */
+    background-color: #ffffff;
   }
   .navbar-item a {
-    color: #213547; /* Dark text for links */
+    color: #213547;
   }
   .navbar-item a:hover {
-    color: #747bff; /* Hover color */
+    color: #747bff;
   }
 }
 
-/* Dark Mode Styles */
 @media (prefers-color-scheme: dark) {
   :root {
-    color: rgba(255, 255, 255, 0.87); /* Light text for dark mode */
-    background-color: #121212; /* Dark background */
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #121212;
   }
 
-  /* Flight Box in Dark Mode */
   .flight {
-    border: 2px solid #444; /* Lighter dark border */
-    background-color: #333; /* Dark background */
+    border: 2px solid #444; 
+    background-color: #333; 
   }
 
-  /* Link hover effect in dark mode */
   a:hover {
-    color: #f9b94b; /* Yellow hover color */
+    color: #f9b94b;
   }
 
-  /* Button style for dark mode */
   button {
-    background-color: #444; /* Dark background */
-    color: #e4e4e4; /* Light text */
+    background-color: #444;
+    color: #e4e4e4;
   }
 
-  /* Navbar styling for dark mode */
   .navbar {
-    background-color: #333; /* Dark navbar */
+    background-color: #333;
   }
   .navbar-item a {
-    color: #e4e4e4; /* Light text for links */
+    color: #e4e4e4;
   }
   .navbar-item a:hover {
-    color: #f9b94b; /* Hover color */
+    color: #f9b94b;
   }
 }
 
-/* Responsive Design: For screens 768px and smaller */
 @media (max-width: 768px) {
   .navbar-list {
     flex-direction: column;
