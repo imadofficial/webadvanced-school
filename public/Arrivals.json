@@ -1,1016 +1,621 @@
 {
-   "_embedded":{
-      "flights":[
-         {
-            "scheduled_time":"2025-05-09T13:55:00+02:00",
-            "best_known_time":"2025-05-09T14:24:00+02:00",
-            "companions":[
-               {
-                  "id":"XR 1783",
-                  "carrier":"Corendon Airlines Eu"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113195XR1783A",
-            "carrier_name":"Corendon Airlines Eu",
-            "location":{
-               "name":"Heraklion",
-               "uniform_city_key":"Heraklion",
-               "iata":"HER"
-            },
-            "state":"EST",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"XR1783",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T14:00:00+02:00",
-            "best_known_time":"2025-05-09T13:49:00+02:00",
-            "companions":[
-               {
-                  "id":"SN 3256",
-                  "carrier":"Brussels Airlines"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113200SN3256A",
-            "carrier_name":"Brussels Airlines",
-            "location":{
-               "name":"Heraklion",
-               "uniform_city_key":"Heraklion",
-               "iata":"HER"
-            },
-            "state":"BLATE",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"SN3256",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T14:05:00+02:00",
-            "best_known_time":"2025-05-09T14:01:00+02:00",
-            "companions":[
-               {
-                  "id":"OS 359",
-                  "carrier":"Austrian"
+   "_embedded": {
+       "flights": [
+           {
+               "scheduled_time": "2025-05-09T22:10:00+02:00",
+               "best_known_time": "2025-05-09T22:04:00+02:00",
+               "companions": [
+                   {
+                       "id": "TB 2511",
+                       "carrier": "TUI fly"
+                   }
+               ],
+               "via": [
+                   {
+                       "name": "Marrakech",
+                       "uniform_city_key": "Marrakech",
+                       "iata": "RAK"
+                   }
+               ],
+               "type": "arrival",
+               "id": "29113690TB2511A",
+               "carrier_name": "TUI fly",
+               "location": {
+                   "name": "Agadir Al Massira",
+                   "uniform_city_key": "Agadir",
+                   "iata": "AGA"
                },
-               {
-                  "id":"SN 6008",
-                  "carrier":"Brussels Airlines"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113205OS359A",
-            "carrier_name":"Austrian",
-            "location":{
-               "name":"Vienne",
-               "uniform_city_key":"Vienna",
-               "iata":"VIE"
-            },
-            "state":"ARR",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"OS359",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T14:10:00+02:00",
-            "best_known_time":"2025-05-09T14:07:00+02:00",
-            "companions":[
-               {
-                  "id":"BA 394",
-                  "carrier":"British Airways"
+               "state": "LABA",
+               "last_modified": "2025-05-09T23:52:48+02:00",
+               "carrier_flight_number": "TB2511",
+               "min_passenger_arrival_time": "",
+               "max_passenger_arrival_time": ""
+           },
+           {
+               "scheduled_time": "2025-05-09T22:15:00+02:00",
+               "best_known_time": "2025-05-09T23:28:00+02:00",
+               "companions": [
+                   {
+                       "id": "KL 1707",
+                       "carrier": "KLM"
+                   },
+                   {
+                       "id": "MF 9359",
+                       "carrier": "Xiamen Airlines"
+                   },
+                   {
+                       "id": "KQ 1733",
+                       "carrier": "Kenya Airways"
+                   },
+                   {
+                       "id": "AM 6310",
+                       "carrier": "AeroM\u00e9xico"
+                   },
+                   {
+                       "id": "MU 1835",
+                       "carrier": "China Eastern Airlin"
+                   }
+               ],
+               "via": [],
+               "type": "arrival",
+               "id": "29113695KL1707A",
+               "carrier_name": "KLM",
+               "location": {
+                   "name": "Amsterdam Schiphol",
+                   "uniform_city_key": "Amsterdam",
+                   "iata": "AMS"
                },
-               {
-                  "id":"B6 6286",
-                  "carrier":"JetBlue Airways"
+               "state": "LABA",
+               "last_modified": "2025-05-09T23:52:48+02:00",
+               "carrier_flight_number": "KL1707",
+               "min_passenger_arrival_time": "",
+               "max_passenger_arrival_time": ""
+           },
+           {
+               "scheduled_time": "2025-05-09T22:15:00+02:00",
+               "best_known_time": "2025-05-09T22:23:00+02:00",
+               "companions": [
+                   {
+                       "id": "SN 2590",
+                       "carrier": "Brussels Airlines"
+                   },
+                   {
+                       "id": "EY 7218",
+                       "carrier": "Etihad Airways"
+                   }
+               ],
+               "via": [],
+               "type": "arrival",
+               "id": "29113695SN2590A",
+               "carrier_name": "Brussels Airlines",
+               "location": {
+                   "name": "Berlin Brandenburg",
+                   "uniform_city_key": "Berlin BER",
+                   "iata": "BER"
                },
-               {
-                  "id":"MH 9720",
-                  "carrier":"Malaysia Airlines"
+               "state": "LABA",
+               "last_modified": "2025-05-09T23:52:48+02:00",
+               "carrier_flight_number": "SN2590",
+               "min_passenger_arrival_time": "",
+               "max_passenger_arrival_time": ""
+           },
+           {
+               "scheduled_time": "2025-05-09T22:15:00+02:00",
+               "best_known_time": "2025-05-09T22:18:00+02:00",
+               "companions": [
+                   {
+                       "id": "TB 2662",
+                       "carrier": "TUI fly"
+                   }
+               ],
+               "via": [],
+               "type": "arrival",
+               "id": "29113695TB2662A",
+               "carrier_name": "TUI fly",
+               "location": {
+                   "name": "Tangier",
+                   "uniform_city_key": "Tangier",
+                   "iata": "TNG"
                },
-               {
-                  "id":"JL 7705",
-                  "carrier":"Japan Airlines"
+               "state": "LABA",
+               "last_modified": "2025-05-09T23:52:48+02:00",
+               "carrier_flight_number": "TB2662",
+               "min_passenger_arrival_time": "",
+               "max_passenger_arrival_time": ""
+           },
+           {
+               "scheduled_time": "2025-05-09T22:25:00+02:00",
+               "best_known_time": "2025-05-09T22:10:00+02:00",
+               "companions": [
+                   {
+                       "id": "LO 231",
+                       "carrier": "LOT Polish Airlines"
+                   },
+                   {
+                       "id": "TK 8151",
+                       "carrier": "Turkish Airlines"
+                   }
+               ],
+               "via": [],
+               "type": "arrival",
+               "id": "29113705LO231A",
+               "carrier_name": "LOT Polish Airlines",
+               "location": {
+                   "name": "Warschau",
+                   "uniform_city_key": "Warsaw",
+                   "iata": "WAW"
                },
-               {
-                  "id":"AA 7088",
-                  "carrier":"American Airlines"
+               "state": "LABA",
+               "last_modified": "2025-05-09T23:52:48+02:00",
+               "carrier_flight_number": "LO231",
+               "min_passenger_arrival_time": "",
+               "max_passenger_arrival_time": ""
+           },
+           {
+               "scheduled_time": "2025-05-09T22:30:00+02:00",
+               "best_known_time": "2025-05-09T22:26:00+02:00",
+               "companions": [
+                   {
+                       "id": "IB 603",
+                       "carrier": "Iberia"
+                   },
+                   {
+                       "id": "VY 5233",
+                       "carrier": "Vueling"
+                   },
+                   {
+                       "id": "LA 1544",
+                       "carrier": "LATAM Chile"
+                   }
+               ],
+               "via": [],
+               "type": "arrival",
+               "id": "29113710IB603A",
+               "carrier_name": "Iberia",
+               "location": {
+                   "name": "Madrid",
+                   "uniform_city_key": "Madrid",
+                   "iata": "MAD"
                },
-               {
-                  "id":"QR 8293",
-                  "carrier":"Qatar Airways"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113210BA394A",
-            "carrier_name":"British Airways",
-            "location":{
-               "name":"Londres Heathrow",
-               "uniform_city_key":"London LHR",
-               "iata":"LHR"
-            },
-            "state":"ARR",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"BA394",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T14:10:00+02:00",
-            "best_known_time":"2025-05-09T14:45:00+02:00",
-            "companions":[
-               {
-                  "id":"TB 2252",
-                  "carrier":"TUI fly"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113210TB2252A",
-            "carrier_name":"TUI fly",
-            "location":{
-               "name":"Heraklion",
-               "uniform_city_key":"Heraklion",
-               "iata":"HER"
-            },
-            "state":"DEL",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"TB2252",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T14:15:00+02:00",
-            "companions":[
-               {
-                  "id":"LX 780",
-                  "carrier":"Swiss"
+               "state": "LABA",
+               "last_modified": "2025-05-09T23:52:48+02:00",
+               "carrier_flight_number": "IB603",
+               "min_passenger_arrival_time": "",
+               "max_passenger_arrival_time": ""
+           },
+           {
+               "scheduled_time": "2025-05-09T22:30:00+02:00",
+               "companions": [
+                   {
+                       "id": "SN 2724",
+                       "carrier": "Brussels Airlines"
+                   },
+                   {
+                       "id": "LX 4550",
+                       "carrier": "Swiss"
+                   }
+               ],
+               "via": [],
+               "type": "arrival",
+               "id": "29113710SN2724A",
+               "carrier_name": "Brussels Airlines",
+               "location": {
+                   "name": "Geneve",
+                   "uniform_city_key": "Geneva",
+                   "iata": "GVA"
                },
-               {
-                  "id":"AC 6779",
-                  "carrier":"Air Canada"
+               "state": "CAN",
+               "last_modified": "2025-05-09T23:52:48+02:00",
+               "carrier_flight_number": "SN2724",
+               "min_passenger_arrival_time": "",
+               "max_passenger_arrival_time": ""
+           },
+           {
+               "scheduled_time": "2025-05-09T22:35:00+02:00",
+               "best_known_time": "2025-05-09T22:39:00+02:00",
+               "companions": [
+                   {
+                       "id": "SN 2618",
+                       "carrier": "Brussels Airlines"
+                   },
+                   {
+                       "id": "LH 5590",
+                       "carrier": "Lufthansa"
+                   }
+               ],
+               "via": [],
+               "type": "arrival",
+               "id": "29113715SN2618A",
+               "carrier_name": "Brussels Airlines",
+               "location": {
+                   "name": "Frankfurt",
+                   "uniform_city_key": "Frankfurt",
+                   "iata": "FRA"
                },
-               {
-                  "id":"SN 5108",
-                  "carrier":"Brussels Airlines"
+               "state": "LABA",
+               "last_modified": "2025-05-09T23:52:48+02:00",
+               "carrier_flight_number": "SN2618",
+               "min_passenger_arrival_time": "",
+               "max_passenger_arrival_time": ""
+           },
+           {
+               "scheduled_time": "2025-05-09T23:10:00+02:00",
+               "best_known_time": "2025-05-09T22:49:00+02:00",
+               "companions": [
+                   {
+                       "id": "SN 2204",
+                       "carrier": "Brussels Airlines"
+                   }
+               ],
+               "via": [],
+               "type": "arrival",
+               "id": "29113750SN2204A",
+               "carrier_name": "Brussels Airlines",
+               "location": {
+                   "name": "Samos",
+                   "uniform_city_key": "Samos",
+                   "iata": "SMI"
                },
-               {
-                  "id":"NH 6757",
-                  "carrier":"All Nippon Airways"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113215LX780A",
-            "carrier_name":"Swiss",
-            "location":{
-               "name":"Z\u00fcrich",
-               "uniform_city_key":"Zurich",
-               "iata":"ZRH"
-            },
-            "state":"CAN",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"LX780",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T14:15:00+02:00",
-            "best_known_time":"2025-05-09T15:06:00+02:00",
-            "companions":[
-               {
-                  "id":"SN 2548",
-                  "carrier":"Brussels Airlines"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113215SN2548A",
-            "carrier_name":"Brussels Airlines",
-            "location":{
-               "name":"Cracovie",
-               "uniform_city_key":"Krakow",
-               "iata":"KRK"
-            },
-            "state":"DEL",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"SN2548",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T14:15:00+02:00",
-            "best_known_time":"2025-05-09T14:42:00+02:00",
-            "companions":[
-               {
-                  "id":"TB 2302",
-                  "carrier":"TUI fly"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113215TB2302A",
-            "carrier_name":"TUI fly",
-            "location":{
-               "name":"Kos",
-               "uniform_city_key":"Kos",
-               "iata":"KGS"
-            },
-            "state":"EST",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"TB2302",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T14:15:00+02:00",
-            "best_known_time":"2025-05-09T14:27:00+02:00",
-            "companions":[
-               {
-                  "id":"TB 2342",
-                  "carrier":"TUI fly"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113215TB2342A",
-            "carrier_name":"TUI fly",
-            "location":{
-               "name":"Rhodes",
-               "uniform_city_key":"Rhodes",
-               "iata":"RHO"
-            },
-            "state":"EST",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"TB2342",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T14:25:00+02:00",
-            "best_known_time":"2025-05-09T14:33:00+02:00",
-            "companions":[
-               {
-                  "id":"VY 8986",
-                  "carrier":"Vueling"
+               "state": "LABA",
+               "last_modified": "2025-05-09T23:52:48+02:00",
+               "carrier_flight_number": "SN2204",
+               "min_passenger_arrival_time": "",
+               "max_passenger_arrival_time": ""
+           },
+           {
+               "scheduled_time": "2025-05-09T23:10:00+02:00",
+               "best_known_time": "2025-05-09T22:55:00+02:00",
+               "companions": [
+                   {
+                       "id": "SN 2206",
+                       "carrier": "Brussels Airlines"
+                   }
+               ],
+               "via": [],
+               "type": "arrival",
+               "id": "29113750SN2206A",
+               "carrier_name": "Brussels Airlines",
+               "location": {
+                   "name": "Mytilene",
+                   "uniform_city_key": "Mytilene",
+                   "iata": "MJT"
                },
-               {
-                  "id":"IB 5292",
-                  "carrier":"Iberia"
+               "state": "LABA",
+               "last_modified": "2025-05-09T23:52:48+02:00",
+               "carrier_flight_number": "SN2206",
+               "min_passenger_arrival_time": "",
+               "max_passenger_arrival_time": ""
+           },
+           {
+               "scheduled_time": "2025-05-09T23:10:00+02:00",
+               "best_known_time": "2025-05-09T23:06:00+02:00",
+               "companions": [
+                   {
+                       "id": "SN 2652",
+                       "carrier": "Brussels Airlines"
+                   },
+                   {
+                       "id": "LH 5584",
+                       "carrier": "Lufthansa"
+                   }
+               ],
+               "via": [],
+               "type": "arrival",
+               "id": "29113750SN2652A",
+               "carrier_name": "Brussels Airlines",
+               "location": {
+                   "name": "M\u00fcnchen",
+                   "uniform_city_key": "Munich",
+                   "iata": "MUC"
                },
-               {
-                  "id":"LA 5760",
-                  "carrier":"LATAM Chile"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113225VY8986A",
-            "carrier_name":"Vueling",
-            "location":{
-               "name":"Barcelone",
-               "uniform_city_key":"Barcelona",
-               "iata":"BCN"
-            },
-            "state":"EST",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"VY8986",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T14:30:00+02:00",
-            "best_known_time":"2025-05-09T14:41:00+02:00",
-            "companions":[
-               {
-                  "id":"SN 3698",
-                  "carrier":"Brussels Airlines"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113230SN3698A",
-            "carrier_name":"Brussels Airlines",
-            "location":{
-               "name":"Barcelone",
-               "uniform_city_key":"Barcelona",
-               "iata":"BCN"
-            },
-            "state":"EST",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"SN3698",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T14:35:00+02:00",
-            "best_known_time":"2025-05-09T14:36:00+02:00",
-            "companions":[
-               {
-                  "id":"KL 1705",
-                  "carrier":"KLM"
+               "state": "FIBA",
+               "last_modified": "2025-05-09T23:52:48+02:00",
+               "carrier_flight_number": "SN2652",
+               "min_passenger_arrival_time": "",
+               "max_passenger_arrival_time": ""
+           },
+           {
+               "scheduled_time": "2025-05-09T23:10:00+02:00",
+               "best_known_time": "2025-05-09T23:02:00+02:00",
+               "companions": [
+                   {
+                       "id": "SN 3184",
+                       "carrier": "Brussels Airlines"
+                   },
+                   {
+                       "id": "AZ 7642",
+                       "carrier": "ITA"
+                   }
+               ],
+               "via": [],
+               "type": "arrival",
+               "id": "29113750SN3184A",
+               "carrier_name": "Brussels Airlines",
+               "location": {
+                   "name": "Rome",
+                   "uniform_city_key": "Rome FCO",
+                   "iata": "FCO"
                },
-               {
-                  "id":"KQ 1725",
-                  "carrier":"Kenya Airways"
+               "state": "LABA",
+               "last_modified": "2025-05-09T23:52:48+02:00",
+               "carrier_flight_number": "SN3184",
+               "min_passenger_arrival_time": "",
+               "max_passenger_arrival_time": ""
+           },
+           {
+               "scheduled_time": "2025-05-09T23:10:00+02:00",
+               "best_known_time": "2025-05-09T23:14:00+02:00",
+               "companions": [
+                   {
+                       "id": "SN 3730",
+                       "carrier": "Brussels Airlines"
+                   }
+               ],
+               "via": [],
+               "type": "arrival",
+               "id": "29113750SN3730A",
+               "carrier_name": "Brussels Airlines",
+               "location": {
+                   "name": "Madrid",
+                   "uniform_city_key": "Madrid",
+                   "iata": "MAD"
                },
-               {
-                  "id":"AM 6209",
-                  "carrier":"AeroM\u00e9xico"
+               "state": "LABA",
+               "last_modified": "2025-05-09T23:52:48+02:00",
+               "carrier_flight_number": "SN3730",
+               "min_passenger_arrival_time": "",
+               "max_passenger_arrival_time": ""
+           },
+           {
+               "scheduled_time": "2025-05-09T23:10:00+02:00",
+               "best_known_time": "2025-05-09T22:47:00+02:00",
+               "companions": [
+                   {
+                       "id": "SN 3738",
+                       "carrier": "Brussels Airlines"
+                   }
+               ],
+               "via": [],
+               "type": "arrival",
+               "id": "29113750SN3738A",
+               "carrier_name": "Brussels Airlines",
+               "location": {
+                   "name": "Malaga",
+                   "uniform_city_key": "Malaga",
+                   "iata": "AGP"
                },
-               {
-                  "id":"GA 9242",
-                  "carrier":"Garuda Indonesia"
+               "state": "LABA",
+               "last_modified": "2025-05-09T23:52:48+02:00",
+               "carrier_flight_number": "SN3738",
+               "min_passenger_arrival_time": "",
+               "max_passenger_arrival_time": ""
+           },
+           {
+               "scheduled_time": "2025-05-09T23:15:00+02:00",
+               "best_known_time": "2025-05-09T23:12:00+02:00",
+               "companions": [
+                   {
+                       "id": "SN 3160",
+                       "carrier": "Brussels Airlines"
+                   },
+                   {
+                       "id": "AZ 7654",
+                       "carrier": "ITA"
+                   }
+               ],
+               "via": [],
+               "type": "arrival",
+               "id": "29113755SN3160A",
+               "carrier_name": "Brussels Airlines",
+               "location": {
+                   "name": "Milaan Malpensa",
+                   "uniform_city_key": "Milan MXP",
+                   "iata": "MXP"
                },
-               {
-                  "id":"MH 5659",
-                  "carrier":"Malaysia Airlines"
+               "state": "LABA",
+               "last_modified": "2025-05-09T23:52:48+02:00",
+               "carrier_flight_number": "SN3160",
+               "min_passenger_arrival_time": "",
+               "max_passenger_arrival_time": ""
+           },
+           {
+               "scheduled_time": "2025-05-09T23:20:00+02:00",
+               "best_known_time": "2025-05-09T22:52:00+02:00",
+               "companions": [
+                   {
+                       "id": "SN 3782",
+                       "carrier": "Brussels Airlines"
+                   }
+               ],
+               "via": [],
+               "type": "arrival",
+               "id": "29113760SN3782A",
+               "carrier_name": "Brussels Airlines",
+               "location": {
+                   "name": "Tenerife",
+                   "uniform_city_key": "Tenerife",
+                   "iata": "TFS"
                },
-               {
-                  "id":"MU 1837",
-                  "carrier":"China Eastern Airlin"
+               "state": "LABA",
+               "last_modified": "2025-05-09T23:52:48+02:00",
+               "carrier_flight_number": "SN3782",
+               "min_passenger_arrival_time": "",
+               "max_passenger_arrival_time": ""
+           },
+           {
+               "scheduled_time": "2025-05-09T23:20:00+02:00",
+               "best_known_time": "2025-05-09T23:11:00+02:00",
+               "companions": [
+                   {
+                       "id": "TB 1552",
+                       "carrier": "TUI fly"
+                   }
+               ],
+               "via": [],
+               "type": "arrival",
+               "id": "29113760TB1552A",
+               "carrier_name": "TUI fly",
+               "location": {
+                   "name": "Gran Canaria",
+                   "uniform_city_key": "Gran Canaria",
+                   "iata": "LPA"
                },
-               {
-                  "id":"DL 9340",
-                  "carrier":"Delta Air Lines"
+               "state": "LABA",
+               "last_modified": "2025-05-09T23:52:48+02:00",
+               "carrier_flight_number": "TB1552",
+               "min_passenger_arrival_time": "",
+               "max_passenger_arrival_time": ""
+           },
+           {
+               "scheduled_time": "2025-05-09T23:25:00+02:00",
+               "best_known_time": "2025-05-09T23:27:00+02:00",
+               "companions": [
+                   {
+                       "id": "SN 2908",
+                       "carrier": "Brussels Airlines"
+                   },
+                   {
+                       "id": "OS 8175",
+                       "carrier": "Austrian"
+                   }
+               ],
+               "via": [],
+               "type": "arrival",
+               "id": "29113765SN2908A",
+               "carrier_name": "Brussels Airlines",
+               "location": {
+                   "name": "Wenen",
+                   "uniform_city_key": "Vienna",
+                   "iata": "VIE"
                },
-               {
-                  "id":"MF 9357",
-                  "carrier":"Xiamen Airlines"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113235KL1705A",
-            "carrier_name":"KLM",
-            "location":{
-               "name":"Amsterdam Schiphol",
-               "uniform_city_key":"Amsterdam",
-               "iata":"AMS"
-            },
-            "state":"EST",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"KL1705",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T14:35:00+02:00",
-            "best_known_time":"2025-05-09T14:49:00+02:00",
-            "companions":[
-               {
-                  "id":"SN 3148",
-                  "carrier":"Brussels Airlines"
+               "state": "FIBA",
+               "last_modified": "2025-05-09T23:52:48+02:00",
+               "carrier_flight_number": "SN2908",
+               "min_passenger_arrival_time": "",
+               "max_passenger_arrival_time": ""
+           },
+           {
+               "scheduled_time": "2025-05-09T23:25:00+02:00",
+               "best_known_time": "2025-05-09T23:20:00+02:00",
+               "companions": [
+                   {
+                       "id": "SN 3706",
+                       "carrier": "Brussels Airlines"
+                   },
+                   {
+                       "id": "SQ 2812",
+                       "carrier": "Singapore Airlines"
+                   },
+                   {
+                       "id": "EY 7272",
+                       "carrier": "Etihad Airways"
+                   }
+               ],
+               "via": [],
+               "type": "arrival",
+               "id": "29113765SN3706A",
+               "carrier_name": "Brussels Airlines",
+               "location": {
+                   "name": "Barcelona",
+                   "uniform_city_key": "Barcelona",
+                   "iata": "BCN"
                },
-               {
-                  "id":"AZ 7644",
-                  "carrier":"ITA"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113235SN3148A",
-            "carrier_name":"Brussels Airlines",
-            "location":{
-               "name":"Milan Linate",
-               "uniform_city_key":"Milan LIN",
-               "iata":"LIN"
-            },
-            "state":"EST",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"SN3148",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T14:35:00+02:00",
-            "best_known_time":"2025-05-09T14:30:00+02:00",
-            "companions":[
-               {
-                  "id":"SN 3588",
-                  "carrier":"Brussels Airlines"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113235SN3588A",
-            "carrier_name":"Brussels Airlines",
-            "location":{
-               "name":"Lyon",
-               "uniform_city_key":"Lyon",
-               "iata":"LYS"
-            },
-            "state":"EST",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"SN3588",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T14:35:00+02:00",
-            "best_known_time":"2025-05-09T15:26:00+02:00",
-            "companions":[
-               {
-                  "id":"SN 3752",
-                  "carrier":"Brussels Airlines"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113235SN3752A",
-            "carrier_name":"Brussels Airlines",
-            "location":{
-               "name":"Valencia",
-               "uniform_city_key":"Valencia",
-               "iata":"VLC"
-            },
-            "state":"DEL",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"SN3752",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T14:40:00+02:00",
-            "best_known_time":"2025-05-09T14:40:00+02:00",
-            "companions":[
-               {
-                  "id":"QR 193",
-                  "carrier":"Qatar Airways"
+               "state": "FIBA",
+               "last_modified": "2025-05-09T23:52:48+02:00",
+               "carrier_flight_number": "SN3706",
+               "min_passenger_arrival_time": "",
+               "max_passenger_arrival_time": ""
+           },
+           {
+               "scheduled_time": "2025-05-09T23:40:00+02:00",
+               "best_known_time": "2025-05-09T23:44:00+02:00",
+               "companions": [
+                   {
+                       "id": "SN 3820",
+                       "carrier": "Brussels Airlines"
+                   },
+                   {
+                       "id": "SQ 2810",
+                       "carrier": "Singapore Airlines"
+                   },
+                   {
+                       "id": "EY 7196",
+                       "carrier": "Etihad Airways"
+                   },
+                   {
+                       "id": "TP 6766",
+                       "carrier": "TAP Portugal"
+                   }
+               ],
+               "via": [],
+               "type": "arrival",
+               "id": "29113780SN3820A",
+               "carrier_name": "Brussels Airlines",
+               "location": {
+                   "name": "Lissabon",
+                   "uniform_city_key": "Lisbon",
+                   "iata": "LIS"
                },
-               {
-                  "id":"WB 1033",
-                  "carrier":"RwandAir"
+               "state": "ARR",
+               "last_modified": "2025-05-09T23:52:48+02:00",
+               "carrier_flight_number": "SN3820",
+               "min_passenger_arrival_time": "",
+               "max_passenger_arrival_time": ""
+           },
+           {
+               "scheduled_time": "2025-05-09T23:55:00+02:00",
+               "best_known_time": "2025-05-10T00:10:00+02:00",
+               "companions": [
+                   {
+                       "id": "TP 646",
+                       "carrier": "TAP Portugal"
+                   }
+               ],
+               "via": [],
+               "type": "arrival",
+               "id": "29113795TP646A",
+               "carrier_name": "TAP Portugal",
+               "location": {
+                   "name": "Lissabon",
+                   "uniform_city_key": "Lisbon",
+                   "iata": "LIS"
                },
-               {
-                  "id":"UL 3100",
-                  "carrier":"SriLankan Airlines"
+               "state": "EST",
+               "last_modified": "2025-05-09T23:52:48+02:00",
+               "carrier_flight_number": "TP646",
+               "min_passenger_arrival_time": "",
+               "max_passenger_arrival_time": ""
+           },
+           {
+               "scheduled_time": "2025-05-10T00:00:00+02:00",
+               "best_known_time": "2025-05-10T00:37:00+02:00",
+               "companions": [
+                   {
+                       "id": "TB 2965",
+                       "carrier": "TUI fly"
+                   }
+               ],
+               "via": [
+                   {
+                       "name": "Antalya",
+                       "uniform_city_key": "Antalya",
+                       "iata": "AYT"
+                   }
+               ],
+               "type": "arrival",
+               "id": "29113800TB2965A",
+               "carrier_name": "TUI fly",
+               "location": {
+                   "name": "Tirana",
+                   "uniform_city_key": "Tirana",
+                   "iata": "TIA"
                },
-               {
-                  "id":"VA 6002",
-                  "carrier":"Virgin Australia"
-               },
-               {
-                  "id":"MH 9275",
-                  "carrier":"Malaysia Airlines"
-               },
-               {
-                  "id":"WY 6315",
-                  "carrier":"Oman Air"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113240QR193A",
-            "carrier_name":"Qatar Airways",
-            "location":{
-               "name":"Doha Hamad International",
-               "uniform_city_key":"Doha",
-               "iata":"DOH"
-            },
-            "state":"EST",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"QR193",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T14:55:00+02:00",
-            "best_known_time":"2025-05-09T15:40:00+02:00",
-            "companions":[
-               {
-                  "id":"SN 3722",
-                  "carrier":"Brussels Airlines"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113255SN3722A",
-            "carrier_name":"Brussels Airlines",
-            "location":{
-               "name":"Madrid",
-               "uniform_city_key":"Madrid",
-               "iata":"MAD"
-            },
-            "state":"DEL",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"SN3722",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T14:55:00+02:00",
-            "best_known_time":"2025-05-09T15:25:00+02:00",
-            "companions":[
-               {
-                  "id":"TO 4442",
-                  "carrier":"Transavia France"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113255TO4442A",
-            "carrier_name":"Transavia France",
-            "location":{
-               "name":"Bordeaux",
-               "uniform_city_key":"Bordeaux",
-               "iata":"BOD"
-            },
-            "state":"DEL",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"TO4442",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T15:00:00+02:00",
-            "best_known_time":"2025-05-09T14:52:00+02:00",
-            "companions":[
-               {
-                  "id":"HV 9264",
-                  "carrier":"Transavia Airlines"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113260HV9264A",
-            "carrier_name":"Transavia Airlines",
-            "location":{
-               "name":"Marrakech",
-               "uniform_city_key":"Marrakech",
-               "iata":"RAK"
-            },
-            "state":"EST",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"HV9264",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T15:05:00+02:00",
-            "best_known_time":"2025-05-09T15:20:00+02:00",
-            "companions":[
-               {
-                  "id":"TP 642",
-                  "carrier":"TAP Portugal"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113265TP642A",
-            "carrier_name":"TAP Portugal",
-            "location":{
-               "name":"Lisbonne",
-               "uniform_city_key":"Lisbon",
-               "iata":"LIS"
-            },
-            "state":"EST",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"TP642",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T15:05:00+02:00",
-            "best_known_time":"2025-05-09T15:21:00+02:00",
-            "companions":[
-               {
-                  "id":"SN 2292",
-                  "carrier":"Brussels Airlines"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113265SN2292A",
-            "carrier_name":"Brussels Airlines",
-            "location":{
-               "name":"Stockholm Arlanda",
-               "uniform_city_key":"Stockholm",
-               "iata":"ARN"
-            },
-            "state":"EST",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"SN2292",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T15:15:00+02:00",
-            "best_known_time":"2025-05-09T15:13:00+02:00",
-            "companions":[
-               {
-                  "id":"MS 725",
-                  "carrier":"Egyptair"
-               },
-               {
-                  "id":"TP 6996",
-                  "carrier":"TAP Portugal"
-               },
-               {
-                  "id":"SN 5602",
-                  "carrier":"Brussels Airlines"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113275MS725A",
-            "carrier_name":"Egyptair",
-            "location":{
-               "name":"Le Caire",
-               "uniform_city_key":"Cairo",
-               "iata":"CAI"
-            },
-            "state":"EST",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"MS725",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T15:15:00+02:00",
-            "best_known_time":"2025-05-09T15:30:00+02:00",
-            "companions":[
-               {
-                  "id":"SN 3202",
-                  "carrier":"Brussels Airlines"
-               },
-               {
-                  "id":"AZ 7656",
-                  "carrier":"ITA"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113275SN3202A",
-            "carrier_name":"Brussels Airlines",
-            "location":{
-               "name":"Venice VCE",
-               "uniform_city_key":"Venice VCE",
-               "iata":"VCE"
-            },
-            "state":"EST",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"SN3202",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T15:15:00+02:00",
-            "best_known_time":"2025-05-09T14:56:00+02:00",
-            "companions":[
-               {
-                  "id":"SN 3598",
-                  "carrier":"Brussels Airlines"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113275SN3598A",
-            "carrier_name":"Brussels Airlines",
-            "location":{
-               "name":"Marseille",
-               "uniform_city_key":"Marseille",
-               "iata":"MRS"
-            },
-            "state":"EST",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"SN3598",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T15:15:00+02:00",
-            "best_known_time":"2025-05-09T15:51:00+02:00",
-            "companions":[
-               {
-                  "id":"SN 3618",
-                  "carrier":"Brussels Airlines"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113275SN3618A",
-            "carrier_name":"Brussels Airlines",
-            "location":{
-               "name":"Nice",
-               "uniform_city_key":"Nice",
-               "iata":"NCE"
-            },
-            "state":"DEL",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"SN3618",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T15:15:00+02:00",
-            "best_known_time":"2025-05-09T14:55:00+02:00",
-            "companions":[
-               {
-                  "id":"TK 1945",
-                  "carrier":"Turkish Airlines"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113275TK1945A",
-            "carrier_name":"Turkish Airlines",
-            "location":{
-               "name":"Istanbul Airport",
-               "uniform_city_key":"Istanbul",
-               "iata":"IST"
-            },
-            "state":"EST",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"TK1945",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T15:20:00+02:00",
-            "best_known_time":"2025-05-09T15:01:00+02:00",
-            "companions":[
-               {
-                  "id":"SK 1593",
-                  "carrier":"SAS"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113280SK1593A",
-            "carrier_name":"SAS",
-            "location":{
-               "name":"Copenhague Kastrup",
-               "uniform_city_key":"Copenhagen",
-               "iata":"CPH"
-            },
-            "state":"EST",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"SK1593",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T15:20:00+02:00",
-            "best_known_time":"2025-05-09T15:36:00+02:00",
-            "companions":[
-               {
-                  "id":"SN 2064",
-                  "carrier":"Brussels Airlines"
-               },
-               {
-                  "id":"NH 5138",
-                  "carrier":"All Nippon Airways"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113280SN2064A",
-            "carrier_name":"Brussels Airlines",
-            "location":{
-               "name":"Edinbourg",
-               "uniform_city_key":"Edinburgh",
-               "iata":"EDI"
-            },
-            "state":"EST",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"SN2064",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T15:20:00+02:00",
-            "best_known_time":"2025-05-09T15:06:00+02:00",
-            "companions":[
-               {
-                  "id":"SN 3170",
-                  "carrier":"Brussels Airlines"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113280SN3170A",
-            "carrier_name":"Brussels Airlines",
-            "location":{
-               "name":"Naples Capodichino",
-               "uniform_city_key":"Naples",
-               "iata":"NAP"
-            },
-            "state":"EST",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"SN3170",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T15:30:00+02:00",
-            "best_known_time":"2025-05-09T16:19:00+02:00",
-            "companions":[
-               {
-                  "id":"SN 3736",
-                  "carrier":"Brussels Airlines"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113290SN3736A",
-            "carrier_name":"Brussels Airlines",
-            "location":{
-               "name":"Malaga",
-               "uniform_city_key":"Malaga",
-               "iata":"AGP"
-            },
-            "state":"DEL",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"SN3736",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T15:45:00+02:00",
-            "best_known_time":"2025-05-09T16:28:00+02:00",
-            "companions":[
-               {
-                  "id":"SN 3816",
-                  "carrier":"Brussels Airlines"
-               },
-               {
-                  "id":"TP 6774",
-                  "carrier":"TAP Portugal"
-               },
-               {
-                  "id":"NH 5126",
-                  "carrier":"All Nippon Airways"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113305SN3816A",
-            "carrier_name":"Brussels Airlines",
-            "location":{
-               "name":"Lisbonne",
-               "uniform_city_key":"Lisbon",
-               "iata":"LIS"
-            },
-            "state":"DEL",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"SN3816",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T15:55:00+02:00",
-            "best_known_time":"2025-05-09T15:52:00+02:00",
-            "companions":[
-               {
-                  "id":"TB 1752",
-                  "carrier":"TUI fly"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113315TB1752A",
-            "carrier_name":"TUI fly",
-            "location":{
-               "name":"Tenerife",
-               "uniform_city_key":"Tenerife",
-               "iata":"TFS"
-            },
-            "state":"EST",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"TB1752",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T16:00:00+02:00",
-            "companions":[
-               {
-                  "id":"LO 237",
-                  "carrier":"LOT Polish Airlines"
-               },
-               {
-                  "id":"AI 7777",
-                  "carrier":"Air India"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113320LO237A",
-            "carrier_name":"LOT Polish Airlines",
-            "location":{
-               "name":"Varsovie",
-               "uniform_city_key":"Warsaw",
-               "iata":"WAW"
-            },
-            "state":"SCH",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"LO237",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         },
-         {
-            "scheduled_time":"2025-05-09T16:00:00+02:00",
-            "best_known_time":"2025-05-09T16:09:00+02:00",
-            "companions":[
-               {
-                  "id":"SN 3802",
-                  "carrier":"Brussels Airlines"
-               },
-               {
-                  "id":"TP 6784",
-                  "carrier":"TAP Portugal"
-               }
-            ],
-            "via":[
-               
-            ],
-            "type":"arrival",
-            "id":"29113320SN3802A",
-            "carrier_name":"Brussels Airlines",
-            "location":{
-               "name":"Faro",
-               "uniform_city_key":"Faro",
-               "iata":"FAO"
-            },
-            "state":"EST",
-            "last_modified":"2025-05-09T14:10:51+02:00",
-            "carrier_flight_number":"SN3802",
-            "min_passenger_arrival_time":"",
-            "max_passenger_arrival_time":""
-         }
-      ]
+               "state": "DEL",
+               "last_modified": "2025-05-09T23:52:48+02:00",
+               "carrier_flight_number": "TB2965",
+               "min_passenger_arrival_time": "",
+               "max_passenger_arrival_time": ""
+           }
+       ]
    }
 }

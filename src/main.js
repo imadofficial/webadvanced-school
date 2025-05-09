@@ -96,6 +96,10 @@ const home = async (container) => {
             <h2>${flight.location.name}</h2>
             <p>${flight.companions[0].id}</p>
           </div>
+
+          <div class="flighttime">
+            <h3>Details ></h3>
+          </div>
         </div>`;
     }
   
