@@ -1,0 +1,234 @@
+{
+    "UA": {
+        "name": "United Airlines",
+        "Icon": "United.png"
+    },
+    "SN": {
+        "name": "Brussels Airlines",
+        "Icon": "BrusselsAir.png"
+    },
+    "BA": {
+        "name": "British Airways",
+        "Icon": "Briish.png"
+    },
+    "DL": {
+        "name": "Delta",
+        "Icon": "Delta.png"
+    },
+    "UX": {
+        "name": "Air Europa",
+        "Icon": "AirEurope.png"
+    },
+    "EY": {
+        "name": "Etihad",
+        "Icon": "Etihad.png"
+    },
+    "SK": {
+        "name": "Scandinavian Airlines System",
+        "Icon": "SAS.png"
+    },
+    "A3": {
+        "name": "Aegean",
+        "Icon": "Aegean.png"
+    },
+    "BJ": {
+        "name": "Nouvelair",
+        "Icon": "Nouvelair.png"
+    },
+    "TK": {
+        "name": "Turkish Airlines",
+        "Icon": "Turkish.png"
+    },
+    "3O": {
+        "name": "Air Arabia Maroc",
+        "Icon": "AirArabia.png"
+    },
+    "AZ": {
+        "name": "ITA Airways",
+        "Icon": "ITA.png"
+    },
+    "ME": {
+        "name": "Middle East Airlines",
+        "Icon": "MEA.png"
+    },
+    "AY": {
+        "name": "Finnair",
+        "Icon": "Finnair.png"
+    },
+    "TP": {
+        "name": "TAP AIR PORTUGAL",
+        "Icon": "TAP.png"
+    },
+    "HU": {
+        "name": "Hainan",
+        "Icon": "Hainan.png"
+    },
+    "IB": {
+        "name": "Iberia",
+        "Icon": "Iberia.png"
+    },
+    "SQ": {
+        "name": "Singaporean Airlines",
+        "Icon": "Singaporean.png"
+    },
+    "RO": {
+        "name": "TAROM",
+        "Icon": "TAROM.png"
+    },
+    "FR": {
+        "name": "TAROM",
+        "Icon": "TAROM.png"
+    },
+    "HO": {
+        "name": "Juneyao",
+        "Icon": "Juneyao.png"
+    },
+    "TU": {
+        "name": "Tunisair",
+        "Icon": "Tunis.png"
+    },
+    "LO": {
+        "name": "LOT Polish",
+        "Icon": "LOT.png"
+    },
+    "TG": {
+        "name": "Thai Airways",
+        "Icon": "THAI.png"
+    },
+    "LX": {
+        "name": "SWISSAIR",
+        "Icon": "Swiss.png"
+    },
+    "AH": {
+        "name": "Air Algeria",
+        "Icon": "AirAlg.png"
+    },
+    "TB": {
+        "name": "TUIfly",
+        "Icon": "TUI.png"
+    },
+    "VY": {
+        "name": "TUIfly",
+        "Icon": "Vueling.webp"
+    },
+    "KL": {
+        "name": "KLM",
+        "Icon": "KLM.png"
+    },
+    "HV": {
+        "name": "Transavia",
+        "Icon": "transavia.svg"
+    },
+    "AC": {
+        "name": "Air Canada",
+        "Icon": "AirCanada.svg"
+    },
+    "AT": {
+        "name": "Royal Air Maroc",
+        "Icon": "RoyalAirMaroc.png"
+    },
+    "EJU": {
+        "name": "EasyJet",
+        "Icon": "easyJet.png"
+    },
+    "XQ": {
+        "name": "SunExpress",
+        "Icon": "SunExpress.png"
+    },
+    "OS": {
+        "name": "Austrian",
+        "Icon": "Austrian.png"
+    },
+    "EZS": {
+        "name": "EasyJet Switzerland",
+        "Icon": "easyJet.png"
+    },
+    "FH": {
+        "name": "Freebird Airlines",
+        "Icon": "Freebirb.png"
+    },
+    "QR": {
+        "name": "Qatar Airways",
+        "Icon": "Qatari.png"
+    },
+    "EK": {
+        "name": "Emirates",
+        "Icon": "Emirates.png"
+    },
+    "WF": {
+        "name": "Widerøe",
+        "Icon": "Wideroe.png"
+    },
+    "FI": {
+        "name": "Icelandair",
+        "Icon": "Icelandair.png"
+    },
+    "XR": {
+        "name": "Corendon Airlines",
+        "Icon": "Corendon.png"
+    },
+    "TO": {
+        "name": "Transavia France",
+        "Icon": "transavia.svg"
+    },
+    "MS": {
+        "name": "EgyptAir",
+        "Icon": "EgyptAir.png"
+    },
+    "GQ": {
+        "name": "Sky Express",
+        "Icon": "sky-express.png"
+    },
+    "BT": {
+        "name": "airBaltic",
+        "Icon": "AirBaltic.png"
+    },
+    "OU": {
+        "name": "Croatia Airlines",
+        "Icon": "Croatia.png"
+    },
+    "KM": {
+        "name": "Air Malta",
+        "Icon": "AirMalta.png"
+    },
+    "JU": {
+        "name": "Air Serbia",
+        "Icon": "AirSerbia.jpg"
+    },
+    "EI": {
+        "name": "Aer Lingus",
+        "Icon": "Aer.png"
+    },
+    "ET": {
+        "name": "Ethiopian Airlines",
+        "Icon": "Ethiopian.png"
+    },
+    "XC": {
+        "name": "Corendon Airlines",
+        "Icon": "Corendon.png"
+    },
+    "LH": {
+        "name": "Lufthansa",
+        "Icon": "Lufthansa.png"
+    },
+    "XY": {
+        "name": "flynas",
+        "Icon": "flynas.png"
+    },
+    "WB": {
+        "name": "RwandAir",
+        "Icon": "Rwanda.png"
+    },
+    "FB": {
+        "name": "Bulgaria Air",
+        "Icon": "Bulgair.png"
+    },
+    "NH": {
+        "name": "All Nippon Airways (ANA)",
+        "Icon": "ANA.png"
+    },
+    "PC": {
+        "name": "Pegasus",
+        "Icon": "Pegasus.png"
+    }
+}
