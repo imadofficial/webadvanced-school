@@ -41,7 +41,8 @@ function extractTimeDiff(time1, time2){
 }
 
 const home = async (container) => {
-  let type = 0;
+  let switchSide = localStorage.getItem('switchSide');
+  let type = parseInt(switchSide) || 0;
   let allFlights = [];
 
   const fetchFlights = async () => {
@@ -52,7 +53,6 @@ const home = async (container) => {
   };
   const renderFlightList = async (filterText = '') => {
     let flightsHTML = '';
-    const getTodayUTC = () => new Date().toISOString().slice(0, 10);
     let OldDate = '';
   
     const filteredFlights = allFlights.filter(flight =>
@@ -126,6 +126,11 @@ const home = async (container) => {
     document.querySelector('.flights-list').innerHTML = flightsHTML;
   };  
 
+  const updateTitle = () => {
+    document.getElementById('Title').textContent = 
+      type === 1 ? 'Aankomsten op Brussels Airport' : 'Vertrekkingen vanuit Brussels Airport';
+  };
+
   const renderLayout = () => {
     container.innerHTML = `
       <nav class="navbar">
@@ -148,20 +153,27 @@ const home = async (container) => {
 
     document.getElementById('flightToggle').addEventListener('change', async (e) => {
       type = e.target.checked ? 1 : 0;
+      localStorage.setItem('switchSide', `${type}`);
+      
+      updateTitle();
+      
       await fetchFlights();
       renderFlightList();
     });
-
+    
     document.getElementById('fname').addEventListener('input', (e) => {
       renderFlightList(e.target.value);
     });
   };
 
   renderLayout();
+  
+  // Now the DOM is rendered, we can safely set the checked property
+  document.getElementById('flightToggle').checked = type === 1;
+  
   await fetchFlights();
   renderFlightList();
 };
-
 
 const notFound = (container) => {
   container.innerHTML = `

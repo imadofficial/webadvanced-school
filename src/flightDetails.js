@@ -96,10 +96,10 @@ export const flightDetails = async (container, queryParams) => {
     container.innerHTML = `
     ${navbar}
   
-      <div>
+    <div>
         <div class="flights-list"></div>
-      </div>
-      <div>
+    </div>
+    <div>
         <h1 class="Title">Vlucht Details</h1>
         <div class="quickView-container">
             <div class="quickView">
@@ -126,10 +126,8 @@ export const flightDetails = async (container, queryParams) => {
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
         <p>Mogelijk door Raven.</p>
-      </div>
     `;
   };
