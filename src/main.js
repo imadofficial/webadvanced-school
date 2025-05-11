@@ -29,6 +29,16 @@ async function GetAirline(Code) {
     : "Unknown.png";
 }
 
+function extractTimeDiff(time1, time2){
+  const date1 = new Date(time1);
+  const date2 = new Date(time2);
+  
+  const diffInMs = date2 - date1;
+  const diffInMinutes = diffInMs / (1000 * 60);
+  
+  return diffInMinutes  
+}
+
 const home = async (container) => {
   let type = 0;
   let allFlights = [];
@@ -39,23 +49,19 @@ const home = async (container) => {
     const stations = await response.json();
     allFlights = stations._embedded.flights;
   };
-
   const renderFlightList = async (filterText = '') => {
     let flightsHTML = '';
     const getTodayUTC = () => new Date().toISOString().slice(0, 10);
     let OldDate = '';
   
-    // 1. Filter flights by search input
     const filteredFlights = allFlights.filter(flight =>
       flight.location.name.toLowerCase().includes(filterText.toLowerCase())
     );
   
-    // 2. Extract unique airline codes
     const airlineCodes = [...new Set(filteredFlights.map(flight =>
       flight.companions[0].id.split(" ")[0]
     ))];
   
-    // 3. Fetch icon for each unique code only once
     const airlineIconMap = {};
     await Promise.all(
       airlineCodes.map(async (code) => {
@@ -64,13 +70,21 @@ const home = async (container) => {
       })
     );
   
-    // 4. Render flights
     for (let flight of filteredFlights) {
       const date = new Date(flight.scheduled_time);
       const hours = date.getHours().toString().padStart(2, '0');
       const minutes = date.getMinutes().toString().padStart(2, '0');
       const timeStr = `${hours}:${minutes}`;
       const FlightDate = date.toISOString().split('T')[0];
+
+      let Status
+      let timeDiff = extractTimeDiff(flight.scheduled_time,flight.best_known_time)
+
+      if (type == 1){
+        Status = `<p>Aangekomen: ${timeDiff} min.</p>`
+      }else{
+        Status = ""
+      }
   
       if (FlightDate !== OldDate) {
         flightsHTML += `
@@ -85,7 +99,7 @@ const home = async (container) => {
       const airlineIcon = airlineIconMap[airlineCode] || 'Unknown.png';
   
       flightsHTML += `
-        <div class="flight" onclick="window.location.hash='/detail?id=${flight.id}'">
+        <div class="flight" onclick="window.location.hash='/detail?id=${flight.companions[0].id}'">
           <div class="flighttime">
             <h5>${timeStr}</h5>
           </div>
@@ -95,6 +109,11 @@ const home = async (container) => {
           <div class="flight-details">
             <h2>${flight.location.name}</h2>
             <p>${flight.companions[0].id}</p>
+          </div>
+
+          <div class="ExtraDetails">
+            <p>${flight.companions.length} bedrijven</p>
+            ${Status}
           </div>
 
           <div class="flighttime">
@@ -150,17 +169,35 @@ const notFound = (container) => {
   `;
 };
 
-const flightDetails = (container, queryParams) => {
+const flightDetails = async (container, queryParams) => {
   const flightId = queryParams.id;
 
+  const fetchFlights = async () => {
+    const file = './AirlineInfo.json';
+    const response = await fetch(file);
+    const data = await response.json();
+    return data;
+  };
+
+  const data = await fetchFlights();
+  console.log(data);
+
   container.innerHTML = `
-      <div>
-          <h1>Flight Details</h1>
-          <p>Flight ID: ${flightId}</p>
-      </div>
+    <nav class="navbar">
+      <h2 id="Navtitle">Info over</h2>
+      <img src=${await GetAirline(flightId)} width="50" height="(50)">
+      <h2 id="Navtitle">${flightId}</h2>
+    </nav>
+
+    <div>
+      <div class="flights-list"></div>
+    </div>
+    <div>
+      <h1>Flight Details</h1>
+      <p>Flight ID: ${flightId}</p>
+    </div>
   `;
 };
-
 
 // Initialize router
 document.addEventListener('DOMContentLoaded', () => {

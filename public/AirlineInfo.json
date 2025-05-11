@@ -1,0 +1,62 @@
+
+{
+    "pagination": {
+      "limit": 100,
+      "offset": 0,
+      "count": 1,
+      "total": 1
+    },
+    "data": [
+      {
+        "flight_date": "2025-05-11",
+        "flight_status": "landed",
+        "departure": {
+          "airport": "Antalya",
+          "timezone": "Europe/Istanbul",
+          "iata": "AYT",
+          "icao": "LTAI",
+          "terminal": null,
+          "gate": null,
+          "delay": 62,
+          "scheduled": "2025-05-11T08:50:00+00:00",
+          "estimated": "2025-05-11T08:50:00+00:00",
+          "actual": "2025-05-11T09:43:00+00:00",
+          "estimated_runway": "2025-05-11T09:43:00+00:00",
+          "actual_runway": "2025-05-11T09:43:00+00:00"
+        },
+        "arrival": {
+          "airport": "Brussels Airport",
+          "timezone": "Europe/Brussels",
+          "iata": "BRU",
+          "icao": "EBBR",
+          "terminal": "1",
+          "gate": null,
+          "baggage": null,
+          "scheduled": "2025-05-11T11:51:00+00:00",
+          "delay": 41,
+          "estimated": "2025-05-11T12:28:00+00:00",
+          "actual": "2025-05-11T12:32:00+00:00",
+          "estimated_runway": "2025-05-11T12:32:00+00:00",
+          "actual_runway": "2025-05-11T12:32:00+00:00"
+        },
+        "airline": {
+          "name": "Freebird Airlines",
+          "iata": "FH",
+          "icao": "FHY"
+        },
+        "flight": {
+          "number": "405",
+          "iata": "FH405",
+          "icao": "FHY405",
+          "codeshared": null
+        },
+        "aircraft": {
+          "registration": "TC-FHP",
+          "iata": "A320",
+          "icao": "A320",
+          "icao24": "4B9910"
+        },
+        "live": null
+      }
+    ]
+  }
