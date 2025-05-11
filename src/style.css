@@ -23,7 +23,11 @@
   padding-top: 75px;
 }
 
-#Title{
+.Title{
+  padding-top: 75px;
+}
+
+#TitleNav{
   padding-top: 0px;
 }
 

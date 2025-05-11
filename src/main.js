@@ -1,9 +1,10 @@
 import Router from './router.js';
+import { flightDetails } from './flightDetails.js';
 import './style.css';
 import './switch.css';
 
 function formatFullDate(dateInput, locale = 'en-US') {
-  const date = new Date(dateInput); // Convert the input to a Date object
+  const date = new Date(dateInput);
   const day = date.getDate();
 
   const month = date.toLocaleString(locale, { month: 'long' });
@@ -15,12 +16,12 @@ function formatFullDate(dateInput, locale = 'en-US') {
 let airlineData = null;
 let eFuse = 0;
 
-async function GetAirline(Code) {
+export async function GetAirline(Code) {
   if (eFuse === 0) {
     console.log("Pulling data...");
     const airlineFetch = await fetch("./AirlineIndex.json");
     airlineData = await airlineFetch.json();
-    eFuse++; // Mark as loaded
+    eFuse++;
   }
 
   const [AirlineCode] = Code.split(" ");
@@ -166,36 +167,6 @@ const notFound = (container) => {
   container.innerHTML = `
   <h1>Page Not Found</h1>
   <a href="/">Go Home</a>
-  `;
-};
-
-const flightDetails = async (container, queryParams) => {
-  const flightId = queryParams.id;
-
-  const fetchFlights = async () => {
-    const file = './AirlineInfo.json';
-    const response = await fetch(file);
-    const data = await response.json();
-    return data;
-  };
-
-  const data = await fetchFlights();
-  console.log(data);
-
-  container.innerHTML = `
-    <nav class="navbar">
-      <h2 id="Navtitle">Info over</h2>
-      <img src=${await GetAirline(flightId)} width="50" height="(50)">
-      <h2 id="Navtitle">${flightId}</h2>
-    </nav>
-
-    <div>
-      <div class="flights-list"></div>
-    </div>
-    <div>
-      <h1>Flight Details</h1>
-      <p>Flight ID: ${flightId}</p>
-    </div>
   `;
 };
 

@@ -1,0 +1,29 @@
+.quickView {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 15px;
+    gap: 10px; /* Adds space between items */
+    height: 200px;
+}
+
+.quickView-item {
+    background-color: #333333;
+    border-radius: 10px;
+    padding: 10px;
+}
+  
+.FlightBox {
+    line-height: 10px;
+    margin-bottom: 0px;
+}
+
+.boxTitle {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-left: 10px;
+    margin-top: -15px;
+}
+  
