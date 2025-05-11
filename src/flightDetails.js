@@ -43,36 +43,43 @@ export const flightDetails = async (container, queryParams) => {
     let DepartureBox
 
     try{
-        if(data["data"][0]["flight_status"] == "landed"){
-            ArrivalBox = `
-                <h2>Geland</h2>
-                <p title="${dateConvert(data["data"][0]["arrival"]["actual_runway"])}">Om ${dateToTime(data["data"][0]["arrival"]["actual_runway"])}</p>
-            `
+        const flightStatus = data["data"][0]["flight_status"];
+        const arrival = data["data"][0]["arrival"];
+        const departure = data["data"][0]["departure"];
 
-            DepartureBox = `
-                <h2>Vertrokken</h2>
-                <p title="${dateConvert(data["data"][0]["departure"]["actual_runway"])}">Om ${dateToTime(data["data"][0]["departure"]["actual_runway"])}</p>
-            `
-        }else if(data["data"][0]["flight_status"] == "active"){
-            ArrivalBox = `
-                <h2>In de lucht</h2>
-                <p title="${dateConvert(data["data"][0]["arrival"]["estimated_runway"])}">Voor ${dateToTime(data["data"][0]["arrival"]["estimated_runway"])}</p>
-            `
+        switch (flightStatus) {
+            case "landed":
+                ArrivalBox = `
+                    <h2>Geland</h2>
+                    <p title="${dateConvert(arrival["actual_runway"])}">Om ${dateToTime(arrival["actual_runway"])}</p>
+                `;
+                DepartureBox = `
+                    <h2>Vertrokken</h2>
+                    <p title="${dateConvert(departure["actual_runway"])}">Om ${dateToTime(departure["actual_runway"])}</p>
+                `;
+                break;
 
-            DepartureBox = `
-            <h2>Vertrokken</h2>
-            <p title="${dateConvert(data["data"][0]["departure"]["actual_runway"])}">Om ${dateToTime(data["data"][0]["departure"]["actual_runway"])}</p>
-            `
-        }else if(data["data"][0]["flight_status"] == "scheduled"){
-            ArrivalBox = `
-            <h2>Gepland</h2>
-            <p title="${dateConvert(data["data"][0]["arrival"]["estimated"])}">Voor ${dateToTime(data["data"][0]["arrival"]["estimated"])}</p>
-            `
+            case "active":
+                ArrivalBox = `
+                    <h2>In de lucht</h2>
+                    <p title="${dateConvert(arrival["estimated_runway"])}">Voor ${dateToTime(arrival["estimated_runway"])}</p>
+                `;
+                DepartureBox = `
+                    <h2>Vertrokken</h2>
+                    <p title="${dateConvert(departure["actual_runway"])}">Om ${dateToTime(departure["actual_runway"])}</p>
+                `;
+                break;
 
-            DepartureBox = `
-            <h2>Nog in Airport</h2>
-            <p title="${dateConvert(data["data"][0]["departure"]["estimated"])}">Gepland voor ${dateToTime(data["data"][0]["departure"]["estimated"])}</p>
-            `
+            case "scheduled":
+                ArrivalBox = `
+                    <h2>Gepland</h2>
+                    <p title="${dateConvert(arrival["estimated"])}">Voor ${dateToTime(arrival["estimated"])}</p>
+                `;
+                DepartureBox = `
+                    <h2>Nog in Airport</h2>
+                    <p title="${dateConvert(departure["estimated"])}">Gepland voor ${dateToTime(departure["estimated"])}</p>
+                `;
+                break;
         }
     }catch(err){
         ArrivalBox = `
