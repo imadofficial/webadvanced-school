@@ -34,7 +34,6 @@
 .flight {
   border: 2px solid #000;
   padding: 10px;
-  margin-bottom: 10px;
   border-radius: 20px;
   width: 65vw;
   background-color: #f9f9f9;
@@ -44,6 +43,10 @@
   justify-content: space-between;
   align-items: center;
   transition: background-color 0.3s, border-color 0.3s;
+}
+
+#List {
+  margin-bottom: 10px;
 }
 
 .HStackLeft {
@@ -112,13 +115,14 @@
   z-index: 1000;
   gap: 2rem
 }
-
-input {
+.citySearch{
   width: 150px;
-  height: 45px;
-
-  padding: 12px 20px;
-  margin: 8px 0;
+  height: 65px;
+  border-radius: 16px;
+  padding: 12px 16px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
   box-sizing: border-box;
 }
 
@@ -153,37 +157,6 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-
-  .flight {
-    border: 2px solid #000; 
-    background-color: #ffffff;
-  }
-
-  a:hover {
-    color: #747bff;
-  }
-
-  button {
-    background-color: #f9f9f9;
-    color: #213547;
-  }
-
-  .navbar {
-    background-color: #ffffff;
-  }
-  .navbar-item a {
-    color: #213547;
-  }
-  .navbar-item a:hover {
-    color: #747bff;
-  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -230,6 +203,56 @@ body {
   .navbar-item {
     margin: 10px 0;
   }
+
+  .mobile-details {
+    display: none;
+  }
+
+  .flight {
+    width: 100%;
+  }
+
+  #Title{
+    padding-top: 135px;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    gap: 1rem;
+  }
+  
+  .citySearch {
+    width: 100%;
+    max-width: 700px;
+    height: 50px;
+    padding: 12px 16px;
+    border-radius: 16px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .flight {
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 700px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }  
 }
 
 a {

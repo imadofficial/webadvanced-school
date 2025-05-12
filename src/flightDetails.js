@@ -15,7 +15,7 @@ function dateToTime(string){
 export const flightDetails = async (container, queryParams) => {
     const flightId = queryParams.id;
     let navbar = `
-      <nav class="navbar">
+      <nav class="detailNavbar">
         <h2 id="Navtitle">Info over</h2>
         <img src=${await GetAirline(flightId)} width="50" height="(50)">
         <h2 id="Navtitle">${flightId}</h2>
@@ -95,15 +95,10 @@ export const flightDetails = async (container, queryParams) => {
   
     container.innerHTML = `
     ${navbar}
-  
-    <div>
-        <div class="flights-list"></div>
-    </div>
     <div>
         <h1 class="Title">Vlucht Details</h1>
-        <div class="quickView-container">
+        <div>
             <div class="quickView">
-
                 <div class="quickView-item">
                     <div class="boxTitle">
                         <img src="./departed_icon.png" height="30" width="30">
@@ -128,6 +123,27 @@ export const flightDetails = async (container, queryParams) => {
                 </div>
             </div>
         </div>
-        <p>Mogelijk door Raven.</p>
+    </div>
+
+    <div class="quickView-item extendedBox">
+        <div class="boxTitle">
+            <img src="./Unknown.png" height="30" width="30">
+            <h2>Type vliegtuig</h2>
+        </div>
+        <div class="extendedDetails">
+            <div class="extendedData FlightBox">
+                <h2>Operator</h2>
+                <p>NouvelAir</p>
+            </div>
+
+            <div class="vl extendedData"></div>
+
+            <div class="extendedData FlightBox">
+                <h2>Terminal</h2>
+                <p>1</p>
+            </div>
+        </div>
+    </div>
+    <p>Mogelijk door Raven.</p>
     `;
   };

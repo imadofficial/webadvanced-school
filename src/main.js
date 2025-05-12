@@ -49,8 +49,9 @@ const home = async (container) => {
     const file = type === 0 ? './Departures.json' : './Arrivals.json';
     const response = await fetch(file);
     const stations = await response.json();
-    allFlights = stations._embedded.flights;
+    allFlights = stations["_embedded"]["flights"];
   };
+
   const renderFlightList = async (filterText = '') => {
     let flightsHTML = '';
     let OldDate = '';
@@ -60,7 +61,7 @@ const home = async (container) => {
     );
   
     const airlineCodes = [...new Set(filteredFlights.map(flight =>
-      flight.companions[0].id.split(" ")[0]
+      flight.companions[0].id.split(" ")[0] //Brussels Airport heeft altijd een spatie tussen [XX(X)] XXX (IATA Code)
     ))];
   
     const airlineIconMap = {};
@@ -100,7 +101,7 @@ const home = async (container) => {
       const airlineIcon = airlineIconMap[airlineCode] || 'Unknown.png';
   
       flightsHTML += `
-        <div class="flight" onclick="window.location.hash='/detail?id=${flight.companions[0].id}'">
+        <div class="flight" id="List" onclick="window.location.hash='/detail?id=${flight.companions[0].id}'">
           <div class="flighttime">
             <h5>${timeStr}</h5>
           </div>
@@ -112,12 +113,12 @@ const home = async (container) => {
             <p>${flight.companions[0].id}</p>
           </div>
 
-          <div class="ExtraDetails">
+          <div class="ExtraDetails mobile-details">
             <p>${flight.companions.length} bedrijven</p>
             ${Status}
           </div>
 
-          <div class="flighttime">
+          <div class="flighttime mobile-details">
             <h3>Details ></h3>
           </div>
         </div>`;
@@ -135,14 +136,14 @@ const home = async (container) => {
     container.innerHTML = `
       <nav class="navbar">
         <div id="switchSelect" class="flight">
-          <h2>Vertrekkingen</h2>
+          <h3>Vertrekkingen</h3>
           <label class="switch">
             <input type="checkbox" id="flightToggle" ${type === 1 ? 'checked' : ''}>
             <span class="slider round"></span>
           </label>
-          <h2>Aankomsten</h2>
+          <h3>Aankomsten</h3>
         </div>
-        <input type="text" placeholder="Stad" id="fname" name="fname">
+        <input class="citySearch" type="text" placeholder="Stad" id="fname" name="fname">
       </nav>
 
       <div>
@@ -151,7 +152,7 @@ const home = async (container) => {
       </div>
     `;
 
-    document.getElementById('flightToggle').addEventListener('change', async (e) => {
+    document.getElementById('flightToggle').addEventListener('change', async (e) => { //Eens de switch geflickt is, voert hij dit functie uit
       type = e.target.checked ? 1 : 0;
       localStorage.setItem('switchSide', `${type}`);
       
@@ -162,13 +163,12 @@ const home = async (container) => {
     });
     
     document.getElementById('fname').addEventListener('input', (e) => {
-      renderFlightList(e.target.value);
+      renderFlightList(e.target.value); //Zoek functie met filter
     });
   };
 
-  renderLayout();
+  renderLayout(); //Dit functie is "het skelet". Aka, de bare minimum
   
-  // Now the DOM is rendered, we can safely set the checked property
   document.getElementById('flightToggle').checked = type === 1;
   
   await fetchFlights();

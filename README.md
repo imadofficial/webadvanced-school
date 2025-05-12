@@ -19,6 +19,7 @@ Voor dit project is minimaal AI gebruikt. Voorval voor bug fixing. Omdat ik van 
 - https://stackoverflow.com/questions/12991351/how-to-force-image-resize-and-keep-aspect-ratio
 - https://stackoverflow.com/questions/10272773/split-string-on-the-first-white-space-occurrence
 - https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+- https://www.w3schools.com/css/css_grid.asp
 
 AI chats:
 - https://claude.ai/share/c7dd8204-7497-4885-84d9-34d4fdb64681
