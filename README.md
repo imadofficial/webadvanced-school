@@ -20,6 +20,10 @@ Voor dit project is minimaal AI gebruikt. Voorval voor bug fixing. Omdat ik van 
 - https://stackoverflow.com/questions/10272773/split-string-on-the-first-white-space-occurrence
 - https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 - https://www.w3schools.com/css/css_grid.asp
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
+- https://stackoverflow.com/questions/5963182/how-to-remove-spaces-from-a-string-using-javascript
+- https://www.youtube.com/watch?v=xTTaWHASpts (Niet meer gebruikt omdat ik niet echt tijd meer had)
+- https://stackoverflow.com/questions/30469261/checking-for-typeof-error-in-js
 
 AI chats:
 - https://claude.ai/share/c7dd8204-7497-4885-84d9-34d4fdb64681

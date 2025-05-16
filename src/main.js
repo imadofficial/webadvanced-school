@@ -30,14 +30,13 @@ export async function GetAirline(Code) {
     : "Unknown.png";
 }
 
-function extractTimeDiff(time1, time2){
-  const date1 = new Date(time1);
-  const date2 = new Date(time2);
+function dateToTime(string) {
+  const date = new Date(string);
   
-  const diffInMs = date2 - date1;
-  const diffInMinutes = diffInMs / (1000 * 60);
+  const hours = String(date.getHours()).padStart(2, '0');
+  const minutes = String(date.getMinutes()).padStart(2, '0');
   
-  return diffInMinutes  
+  return `${hours}:${minutes}`;
 }
 
 const home = async (container) => {
@@ -46,7 +45,7 @@ const home = async (container) => {
   let allFlights = [];
 
   const fetchFlights = async () => {
-    const file = type === 0 ? './Departures.json' : './Arrivals.json';
+    const file = type === 0 ? 'http://localhost:3000/getDepartures' : 'http://localhost:3000/getArrivals';
     const response = await fetch(file);
     const stations = await response.json();
     allFlights = stations["_embedded"]["flights"];
@@ -79,13 +78,34 @@ const home = async (container) => {
       const timeStr = `${hours}:${minutes}`;
       const FlightDate = date.toISOString().split('T')[0];
 
+      const nu = new Date();
       let Status
-      let timeDiff = extractTimeDiff(flight.scheduled_time,flight.best_known_time)
+
+      const now = new Date()
+      const scheduledTime = new Date(flight.scheduled_time);
+      const bestKnownTime = new Date(flight.best_known_time);
+
+      const diffMs = now - bestKnownTime;
+      const diffMinutes = Math.ceil(diffMs / 1000 / 60);
 
       if (type == 1){
-        Status = `<p>Aangekomen: ${timeDiff} min.</p>`
+        if(now > bestKnownTime){
+          Status = `<p>Aangekomen (${diffMinutes} min. geleden)</p>`
+        }else{
+          if(scheduledTime < bestKnownTime){
+            Status = `<p>Te laat: ${dateToTime(bestKnownTime)}</p>`
+          }else if (scheduledTime > bestKnownTime){
+            Status = `<p>Komt vroeg: ${dateToTime(bestKnownTime)}</p>`;
+          }else{
+            Status = `<p>Gepland voor: ${dateToTime(scheduledTime)}</p>`;
+          }
+        }
       }else{
-        Status = ""
+        if(now > bestKnownTime){
+          Status = `<p>Vertrokken: ${dateToTime(bestKnownTime)}</p>`;
+        }else{
+          Status = ``;
+        }
       }
   
       if (FlightDate !== OldDate) {
@@ -99,6 +119,13 @@ const home = async (container) => {
   
       const airlineCode = flight.companions[0].id.split(" ")[0];
       const airlineIcon = airlineIconMap[airlineCode] || 'Unknown.png';
+
+      let bedrijfStr
+      if(flight.companions.length == 1){
+        bedrijfStr = "bedrijf" 
+      }else{
+        bedrijfStr = "bedrijven"
+      }
   
       flightsHTML += `
         <div class="flight" id="List" onclick="window.location.hash='/detail?id=${flight.companions[0].id}'">
@@ -114,7 +141,7 @@ const home = async (container) => {
           </div>
 
           <div class="ExtraDetails mobile-details">
-            <p>${flight.companions.length} bedrijven</p>
+            <p>${flight.companions.length} ${bedrijfStr}</p>
             ${Status}
           </div>
 

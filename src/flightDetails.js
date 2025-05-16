@@ -7,13 +7,33 @@ function dateConvert(string){
     return `${date.getDate()}/${date.getMonth()}/${date.getFullYear()} om ${date.getHours()}:${date.getMinutes()}`
 }
 
-function dateToTime(string){
+let airlineData = null;
+let eFuse = 0;
+
+async function GetAirlineName(Code) {
+  if (eFuse === 0) {
+    console.log("Pulling data...");
+    const airlineFetch = await fetch("./AirlineIndex.json");
+    airlineData = await airlineFetch.json();
+    eFuse++;
+  }
+
+  return airlineData[Code]["name"]
+}
+
+function dateToTime(string) {
     const date = new Date(string);
-    return `${date.getHours()}:${date.getMinutes()}`
+    
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    
+    return `${hours}:${minutes}`;
 }
 
 export const flightDetails = async (container, queryParams) => {
     const flightId = queryParams.id;
+    let strFlight = flightId.replace(/\s/g, '');
+    let flightCompCode = flightId.split(" ")[0]
     let navbar = `
       <nav class="detailNavbar">
         <h2 id="Navtitle">Info over</h2>
@@ -27,10 +47,14 @@ export const flightDetails = async (container, queryParams) => {
     
     const fetchFlight = async () => {
         try{
-        const file = './AirlineInfo.json';
+        console.log(`Pulling data from flight ${strFlight}`)
+        const file = `http://localhost:3000/getFlightDetails?flightnr=${strFlight}`;
         const response = await fetch(file);
+        console.log(response);
+        console.log(`Fetch completed`)
         const data = await response.json();
-        return data;$
+        console.log(`Parsing...`)
+        return data;
     }catch(err){
         console.log(`Failed to fetch: ${err}`)
     }
@@ -60,17 +84,39 @@ export const flightDetails = async (container, queryParams) => {
                 break;
 
             case "active":
-                ArrivalBox = `
-                    <h2>In de lucht</h2>
-                    <p title="${dateConvert(arrival["estimated_runway"])}">Voor ${dateToTime(arrival["estimated_runway"])}</p>
-                `;
-                DepartureBox = `
-                    <h2>Vertrokken</h2>
-                    <p title="${dateConvert(departure["actual_runway"])}">Om ${dateToTime(departure["actual_runway"])}</p>
-                `;
+                if (arrival["estimated_runway"] != null && arrival["estimated_runway"] !== undefined) {
+                    ArrivalBox = `
+                        <h2>In de lucht</h2>
+                        <p title="${dateConvert(arrival["estimated_runway"])}">Aankomst rond ${dateToTime(arrival["estimated_runway"])}</p>
+                    `;
+                    DepartureBox = `
+                        <h2>Vertrokken</h2>
+                        <p title="${dateConvert(departure["actual_runway"])}">Tot ${dateToTime(departure["actual_runway"])}</p>
+                    `;
+                } else {
+                    ArrivalBox = `
+                        <h2>In de lucht</h2>
+                        <p title="${arrival["estimated_runway"] ? dateConvert(arrival["estimated_runway"]) : 'onbekend'}">Aankomst tijd: ${arrival["estimated_runway"] ? dateToTime(arrival["estimated_runway"]) : 'Onbekend'}</p>
+                    `;
+                    DepartureBox = `
+                        <h2>Vertrokken</h2>
+                        <p title="${dateConvert(departure["scheduled"])}">Gepland tot ${dateToTime(departure["scheduled"])}</p>
+                    `;
+                }
                 break;
 
             case "scheduled":
+                ArrivalBox = `
+                    <h2>Gepland</h2>
+                    <p title="${dateConvert(arrival["scheduled"])}">Om ${dateToTime(arrival["scheduled"])}</p>
+                `;
+                DepartureBox = `
+                    <h2>Nog in Airport</h2>
+                    <p title="${dateConvert(departure["estimated"])}">Gepland vertrek om: ${dateToTime(departure["estimated"])}</p>
+                `;
+                break;
+
+            case "diverted":
                 ArrivalBox = `
                     <h2>Gepland</h2>
                     <p title="${dateConvert(arrival["estimated"])}">Voor ${dateToTime(arrival["estimated"])}</p>
@@ -84,12 +130,12 @@ export const flightDetails = async (container, queryParams) => {
     }catch(err){
         ArrivalBox = `
             <h2>Kan niet verbinden</h2>
-            <p>API is mogelijk down</p>
+            <p>API is mogelijk down of vlucht is niet gevonden</p>
         `
 
         DepartureBox = `
             <h2>Kan niet verbinden</h2>
-            <p>API is mogelijk down</p>            
+            <p>API is mogelijk down of vlucht is niet gevonden</p>
         `
     }
   
@@ -133,7 +179,7 @@ export const flightDetails = async (container, queryParams) => {
         <div class="extendedDetails">
             <div class="extendedData FlightBox">
                 <h2>Operator</h2>
-                <p>NouvelAir</p>
+                <p>${await GetAirlineName(flightCompCode)}</p>
             </div>
 
             <div class="vl extendedData"></div>
@@ -144,6 +190,6 @@ export const flightDetails = async (container, queryParams) => {
             </div>
         </div>
     </div>
-    <p>Mogelijk door Raven.</p>
+    <p>Mogelijk gemaakt door <a href="https://testflight.apple.com/join/pnftqm1y">Plus.</a></p>
     `;
   };
