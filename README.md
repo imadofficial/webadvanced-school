@@ -2,9 +2,24 @@
 Met dit webapp kan je eenvoudig je vluchten tracken die vanuit Brussels Airport vertrekken & aankomen.
 Ook kan je bijkomende informatie over de vlucht bekijken op een eenvoudig manier.
 
+## Projectbeschrijving
+Een interactieve webapplicatie om vluchten te volgen, filteren en details te bekijken. Gebruikers kunnen zoeken, filteren en switchen tussen aankomst/vertrek.
 
-## Mogelijke probleem
-Alhoewel de error handling goed werkt. Wil ik er eventjes erbij wijzen dat als je op http://localhost:5173/#/detail?id=AC%20833 zit en de site niet werkt, is het mogelijk omdat we de ratelimiet bereikt hebben van mijn API. Dit kan je fixen door je eigen API-Sleutel te fixen via https://aviationstack.com/. Deze is gratis en kan je makkelijk in de code steken met de JSON die meegeleverd is met de app (in de src/ directory)
+## Functionaliteiten
+- Lijstweergave van vluchten
+- Detailpagina per vlucht
+- Filteren en zoeken op locatie
+- Switch tussen aankomst/vertrek
+- "Responsive design"
+
+## Gebruikte APIs
+- [Aviationstack](https://aviationstack.com/documentation)
+- [Brussels Airport](https://www.brusselsairport.be/nl/passengers/flights/vertrek)
+
+## Installatiehandleiding
+1. Clone de repo: `git clone ...`
+2. Installeer dependencies: `npm install`
+3. Start de app: `npm run dev`
 
 ## Bronvermelding
 Voor dit project is minimaal AI gebruikt. Voorval voor bug fixing. Omdat ik van meening ben dat je er niets van uit leert. Ik heb daarom de EhB cursus (van Web Essentials & Web Advanced) gebruikt samen met deze bronnen:
