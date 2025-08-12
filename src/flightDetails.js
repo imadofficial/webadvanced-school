@@ -7,7 +7,7 @@ function dateConvert(string){
     return `${date.getDate()}/${date.getMonth()}/${date.getFullYear()} om ${date.getHours()}:${date.getMinutes()}`
 }
 
-let airlineData = null;
+let airlineData = null
 let eFuse = 0;
 
 async function GetAirlineName(Code) {
