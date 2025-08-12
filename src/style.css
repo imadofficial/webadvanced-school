@@ -1,0 +1,328 @@
+/* Global Styles */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; 
+}
+
+#Title{
+  padding-top: 75px;
+}
+
+.Title{
+  padding-top: 75px;
+}
+
+#TitleNav{
+  padding-top: 0px;
+}
+
+.flight {
+  border: 2px solid #000;
+  padding: 10px;
+  border-radius: 20px;
+  width: 65vw;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+#List {
+  margin-bottom: 10px;
+}
+
+.HStackLeft {
+  align-items: flex-start;
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.HStackRight {
+  align-items: flex-end;
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+.HStackLeft h3 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.HStackLeft hr {
+  margin: 0;
+  margin-top: 0;
+}
+
+.ExtraDetails {
+  text-align: right;
+  text-align-last: right;
+}
+
+.flighttime {
+  flex-shrink: 0;
+  padding-left: 10px;
+  padding-right: 15px;
+  font-size: 1.2em;
+}
+
+.flight-details {
+  flex-grow: 1;
+}
+
+.flight h2, .flight p {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.flight h2 {
+  margin-bottom: 5px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  gap: 2rem
+}
+.citySearch{
+  width: 150px;
+  height: 65px;
+  border-radius: 16px;
+  padding: 12px 16px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.navbar-item {
+  margin: 0 15px;
+}
+
+.navbar-item a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.navbar-item a:hover {
+  color: #00bcd4;
+}
+
+body {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #121212;
+  }
+
+  .flight {
+    border: 2px solid #444; 
+    background-color: #333; 
+  }
+
+  .flight:hover{
+    background-color: #444;
+  }
+
+  a:hover {
+    color: #f9b94b;
+  }
+
+  button {
+    background-color: #444;
+    color: #e4e4e4;
+  }
+
+  .navbar {
+    background-color: #333;
+  }
+  .navbar-item a {
+    color: #e4e4e4;
+  }
+  .navbar-item a:hover {
+    color: #f9b94b;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-item {
+    margin: 10px 0;
+  }
+
+  .mobile-details {
+    display: none;
+  }
+
+  .flight {
+    width: 100%;
+  }
+
+  #Title{
+    padding-top: 135px;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    gap: 1rem;
+  }
+  
+  .citySearch {
+    width: 100%;
+    max-width: 700px;
+    height: 50px;
+    padding: 12px 16px;
+    border-radius: 16px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .flight {
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 700px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }  
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.vanilla:hover {
+  filter: drop-shadow(0 0 2em #f7df1eaa);
+}
+
+.card {
+  padding: 2em;
+}
+
+img {
+  display: block;
+  width: 45;
+  height: auto;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
